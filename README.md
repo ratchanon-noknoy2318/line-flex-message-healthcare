@@ -15,10 +15,14 @@ Below is an example of a Flex Message used in this system for healthcare communi
   "type": "bubble",
   "hero": {
     "type": "image",
-    "url": "https://res.cloudinary.com/ds6xq6wbm/image/upload/v1756009686/%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3.png",
+    "url": "https://developers-resource.landpress.line.me/fx/img/01_1_cafe.png",
     "size": "full",
     "aspectRatio": "20:13",
-    "aspectMode": "cover"
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "https://line.me/"
+    }
   },
   "body": {
     "type": "box",
@@ -31,12 +35,107 @@ Below is an example of a Flex Message used in this system for healthcare communi
         "size": "xl"
       },
       {
-        "type": "text",
-        "text": "บริการปรึกษาแพทย์ทางไกล",
-        "wrap": true,
-        "margin": "md"
+        "type": "box",
+        "layout": "baseline",
+        "margin": "md",
+        "contents": [
+          {
+            "type": "text",
+            "size": "sm",
+            "color": "#999999",
+            "margin": "md",
+            "flex": 0,
+            "text": "บริการปรึกษาแพทย์ทางไกล"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "lg",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Place",
+                "color": "#aaaaaa",
+                "size": "sm",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "Kamphaeng Phet",
+                "wrap": true,
+                "color": "#666666",
+                "size": "sm",
+                "flex": 5
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Time",
+                "color": "#aaaaaa",
+                "size": "sm",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "10:00 - 23:00",
+                "wrap": true,
+                "color": "#666666",
+                "size": "sm",
+                "flex": 5
+              }
+            ]
+          }
+        ]
       }
     ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "uri": "https://kppmch-register.vercel.app/PatientRegister",
+          "label": "ลงทะเบียน"
+        }
+      },
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "label": "ค้นหาวันนัด",
+          "uri": "https://telemedscheduler.vercel.app/"
+        }
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [],
+        "margin": "sm"
+      }
+    ],
+    "flex": 0
   }
 }
 ```
