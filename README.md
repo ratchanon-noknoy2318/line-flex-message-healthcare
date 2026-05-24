@@ -17,7 +17,7 @@ Directly load JSON files and pass the content to the LINE Messaging API SDK. Env
 
 **Node.js Example:**
 ```javascript
-const flexContents = require('./jsons/5_zh-TW_訂單確認.json');
+const getTelemedSession = require('./TelemedicineStartFlexmessage.json');
 
 // Send via LINE Messaging API SDK
 // Load environment variables
@@ -32,7 +32,7 @@ import { Client } from "@line/bot-sdk";
 const client = new Client(config);
 
 // Import Flex Message JSON
-import flexMessage from "./TelemedicineStartFlexmessage.json.json" with { type: "json" };
+import flexMessage from "./TelemedicineStartFlexmessage.json" with { type: "json" };
 
 // Send message example
 await client.pushMessage(USER_ID, flexMessage);
